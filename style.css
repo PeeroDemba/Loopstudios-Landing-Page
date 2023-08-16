@@ -1,0 +1,864 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Alata", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktoplinks {
+  display: block;
+}
+
+#hamburger {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+header {
+  background-image: url(./images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+header .navbar {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul li {
+  display: inline-block;
+  width: 5.9rem;
+  text-align: right;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 0.5rem;
+}
+header ul li a:hover {
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+header > div:last-child {
+  width: 90vw;
+  margin: auto;
+  height: 70vh;
+  padding-top: 5rem;
+}
+header p {
+  border: 1px solid white;
+  font-size: 4.2rem;
+  width: 55%;
+  padding: 2rem;
+}
+
+main {
+  min-height: 45rem;
+  position: relative;
+  padding: 0 5vw;
+  margin-bottom: 3rem;
+}
+main img {
+  width: 65%;
+  position: relative;
+  top: 5rem;
+}
+main .text {
+  background-color: white;
+  height: 25rem;
+  width: 40vw;
+  padding: 6rem 0rem 0rem 6rem;
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+}
+main .text p:first-child {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 3.5rem;
+}
+main .text p:nth-child(2) {
+  line-height: 1.7rem;
+}
+
+section {
+  min-height: 60vh;
+}
+
+.start {
+  width: 90vw;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.start p {
+  font-size: 3rem;
+}
+.start a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 2.5rem;
+  border: 1px solid black;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+.start a:hover {
+  background-color: black;
+  color: white;
+}
+
+.creations {
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+  gap: 2rem;
+}
+.creations .grid1,
+.creations .grid2,
+.creations .grid3,
+.creations .grid4,
+.creations .grid5,
+.creations .grid6,
+.creations .grid7,
+.creations .grid8 {
+  position: relative;
+}
+.creations .grid1:hover::after,
+.creations .grid2:hover::after,
+.creations .grid3:hover::after,
+.creations .grid4:hover::after,
+.creations .grid5:hover::after,
+.creations .grid6:hover::after,
+.creations .grid7:hover::after,
+.creations .grid8:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.creations .grid1:hover p,
+.creations .grid2:hover p,
+.creations .grid3:hover p,
+.creations .grid4:hover p,
+.creations .grid5:hover p,
+.creations .grid6:hover p,
+.creations .grid7:hover p,
+.creations .grid8:hover p {
+  color: black;
+  z-index: 2;
+  cursor: pointer;
+}
+.creations img {
+  width: 100%;
+  filter: brightness(0.6);
+}
+.creations p {
+  position: absolute;
+  bottom: 0%;
+  font-size: 2rem;
+  width: 14.5rem;
+  padding: 2rem 2rem;
+  color: #ddd;
+}
+.creations .grid1 p,
+.creations .grid3 p,
+.creations .grid4 p {
+  width: 13rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: black;
+  color: white;
+  height: 10rem;
+  margin-top: 5rem;
+  padding: 2.5rem 5vw;
+}
+footer li {
+  display: inline-block;
+  width: 5rem;
+}
+footer li a {
+  color: white;
+  text-decoration: none;
+}
+footer li a:hover {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid white;
+}
+footer .copyright {
+  color: rgba(255, 255, 255, 0.7);
+  justify-self: flex-end;
+}
+footer .socials {
+  justify-self: flex-end;
+}
+footer .socials img {
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+footer .socials img:first-child {
+  margin-right: 1rem;
+}
+footer .socials img:nth-child(2) {
+  margin-right: 1rem;
+}
+footer .socials img:nth-child(3) {
+  margin-right: 1rem;
+}
+footer .socials img:hover {
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1279px) {
+  header {
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header p {
+    font-size: 4.2rem;
+    width: 60%;
+    padding: 2rem;
+  }
+  main {
+    min-height: 40rem;
+    position: relative;
+  }
+  main .text {
+    background-color: white;
+    height: 25rem;
+    width: 40vw;
+    padding: 3rem 0rem 0rem 3rem;
+    position: absolute;
+    top: 18rem;
+    left: 50%;
+  }
+  main .text p:first-child {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    line-height: 3.4rem;
+  }
+  .creations {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    gap: 2rem;
+  }
+  .creations p {
+    position: absolute;
+    bottom: 0%;
+    font-size: 1.5rem;
+    padding: 2rem 2rem;
+    color: #ddd;
+  }
+  .creations .grid1 p,
+  .creations .grid3 p,
+  .creations .grid4 p {
+    width: 11rem;
+  }
+}
+@media (max-width: 1023px) {
+  header {
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header p {
+    font-size: 3.2rem;
+    width: 63%;
+    padding: 2rem;
+  }
+  main {
+    min-height: 40rem;
+    position: relative;
+  }
+  main .text {
+    background-color: white;
+    height: 25rem;
+    width: 50vw;
+    padding: 3rem 0rem 0rem 3rem;
+    position: absolute;
+    top: 14rem;
+    left: 45%;
+  }
+  main .text p:first-child {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 3.2rem;
+  }
+  .creations {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    gap: 2rem;
+  }
+  .creations p {
+    position: absolute;
+    bottom: 0%;
+    font-size: 1.2rem;
+    width: 10rem;
+    padding: 1rem 1rem;
+    color: #ddd;
+  }
+  .creations .grid1 p,
+  .creations .grid3 p,
+  .creations .grid4 p {
+    width: 7.6rem;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: black;
+    color: white;
+    height: 10rem;
+    margin-top: 5rem;
+    padding: 2.5rem 5vw;
+  }
+  footer li {
+    display: inline-block;
+    width: 4.45rem;
+  }
+  footer li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  footer li a:hover {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid white;
+  }
+}
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktoplinks {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+    width: 2rem;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  #dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    z-index: 3;
+    padding: 6.7vh 0 0 0;
+  }
+  #dropdown > div {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+  }
+  #dropdown ul {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    justify-content: flex-start;
+    margin-top: 5rem;
+  }
+  #dropdown li {
+    display: block;
+    width: 6rem;
+    height: 3rem;
+    padding: 1rem 0;
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+  #dropdown li a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  #dropdown li a:hover {
+    border-bottom: none;
+    cursor: pointer;
+  }
+  body {
+    min-height: 100vh;
+    position: relative;
+  }
+  header {
+    background-image: url(./images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header > div:last-child {
+    width: 90vw;
+    margin: auto;
+  }
+  header p {
+    font-size: 3.3rem;
+    width: 90vw;
+  }
+  main {
+    min-height: 50vh;
+    position: relative;
+    margin-top: 5rem;
+  }
+  main img {
+    width: 90vw;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  main .text {
+    background-color: white;
+    height: 60%;
+    width: 90vw;
+    padding: 4rem 2.25rem 0rem 2.25rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+  main .text p:first-child {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  main .text p:nth-child(2) {
+    line-height: 2rem;
+    font-size: 1.3rem;
+  }
+  section {
+    min-height: 100vh;
+    margin-top: 5rem;
+  }
+  section > a {
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1.3rem 1.8rem;
+    background-color: white;
+    width: 20rem;
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+  section > a:hover {
+    background-color: none;
+    color: none;
+  }
+  .start {
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .start p {
+    font-size: 3rem;
+  }
+  .creations {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    gap: 3rem;
+  }
+  .creations .grid1,
+  .creations .grid2,
+  .creations .grid3,
+  .creations .grid4,
+  .creations .grid5,
+  .creations .grid6,
+  .creations .grid7,
+  .creations .grid8 {
+    position: relative;
+  }
+  .creations img {
+    width: 100%;
+  }
+  .creations p {
+    position: absolute;
+    bottom: 0%;
+    font-size: 2rem;
+    width: 16rem;
+    padding: 1.5rem 1.5rem;
+  }
+  .creations .grid1 p,
+  .creations .grid3 p,
+  .creations .grid4 p {
+    width: 14.5rem;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 1rem;
+    background-color: black;
+    color: white;
+    height: 40rem;
+    margin-top: 7rem;
+    padding: 3rem 2rem;
+  }
+  footer .logofooter {
+    margin: auto;
+  }
+  footer li {
+    display: block;
+    width: 5rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  footer li a {
+    color: white;
+    text-decoration: none;
+  }
+  footer li a:hover {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid white;
+  }
+  footer .copyright {
+    color: rgba(255, 255, 255, 0.7);
+    justify-self: center;
+    order: 4;
+  }
+  footer .socials {
+    justify-self: center;
+    order: 3;
+  }
+  footer .socials img {
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+  footer .socials img:first-child {
+    margin-right: 1rem;
+  }
+  footer .socials img:nth-child(2) {
+    margin-right: 1rem;
+  }
+  footer .socials img:nth-child(3) {
+    margin-right: 1rem;
+  }
+  footer .socials img:hover {
+    border-bottom: 3px solid white;
+    cursor: pointer;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    background-image: url(./images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header > div:last-child {
+    width: 90vw;
+    margin: auto;
+  }
+  header p {
+    font-size: 2.5rem;
+    padding: 1.3rem;
+    width: 90vw;
+  }
+  main {
+    min-height: 60vh;
+    position: relative;
+  }
+  main .text {
+    background-color: white;
+    height: 60%;
+    width: 90vw;
+    padding: 3rem 1rem 0rem 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+  main .text p:first-child {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+  main .text p:nth-child(2) {
+    line-height: 1.8rem;
+    font-size: 1.1rem;
+  }
+  section {
+    min-height: 100vh;
+    margin-top: 5rem;
+  }
+  section > a {
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    width: 11rem;
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+  }
+  section > a:hover {
+    background-color: none;
+    color: none;
+  }
+  .start {
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .start p {
+    font-size: 2.2rem;
+  }
+  .creations {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    gap: 1.5rem;
+  }
+  .creations .grid1,
+  .creations .grid2,
+  .creations .grid3,
+  .creations .grid4,
+  .creations .grid5,
+  .creations .grid6,
+  .creations .grid7,
+  .creations .grid8 {
+    position: relative;
+  }
+  .creations img {
+    width: 100%;
+  }
+  .creations p {
+    position: absolute;
+    bottom: 0%;
+    font-size: 1.5rem;
+    width: 14rem;
+    padding: 1.5rem 1.5rem;
+  }
+  .creations .grid1 p,
+  .creations .grid3 p,
+  .creations .grid4 p {
+    width: 10rem;
+  }
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  header {
+    background-image: url(./images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header > div:last-child {
+    width: 90vw;
+    margin: auto;
+  }
+  header p {
+    font-size: 2.5rem;
+    padding: 1.3rem;
+    width: 90vw;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  header {
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header > div:last-child {
+    width: 90vw;
+    margin: auto;
+    height: 70vh;
+    padding-top: 1rem;
+  }
+  header p {
+    font-size: 3.2rem;
+    width: 63%;
+    padding: 2rem;
+  }
+  main {
+    min-height: 40rem;
+    position: relative;
+  }
+}
+@media (min-width: 1023px) and (orientation: landscape) {
+  header {
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header > div:last-child {
+    width: 90vw;
+    margin: auto;
+    height: 70vh;
+    padding-top: 1rem;
+  }
+  header p {
+    font-size: 3.2rem;
+    width: 63%;
+    padding: 2rem;
+  }
+  main {
+    min-height: 45rem;
+    position: relative;
+  }
+}
+@media (min-width: 1279px) and (orientation: landscape) {
+  header {
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  header .navbar {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header ul li {
+    display: inline-block;
+    width: 6rem;
+    text-align: right;
+  }
+  header ul li a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 0.5rem;
+  }
+  header ul li a:hover {
+    border-bottom: 3px solid white;
+    cursor: pointer;
+  }
+  header > div:last-child {
+    width: 90vw;
+    margin: auto;
+    height: 70vh;
+    padding-top: 5rem;
+  }
+  header p {
+    border: 1px solid white;
+    font-size: 4.2rem;
+    width: 55%;
+    padding: 2rem;
+  }
+  main {
+    min-height: 45rem;
+    position: relative;
+  }
+}
